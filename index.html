@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<title>Bellelux Hair | Perruques en précommande</title>
+<meta name="description" content="Toutes les perruques Bellelux Hair sont en précommande. Paiement en deux fois : acompte à la commande, solde à la livraison. Commande sur WhatsApp.">
+<meta property="og:title" content="Bellelux Hair | Perruques en précommande">
+<meta property="og:description" content="Précommandez votre perruque. Paiement en deux fois, commande confirmée sur WhatsApp.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="boutique.css">
+<style>
+:root{
+--encre:#2A171C;--doux:#7C6066;--ivoire:#FCF6F3;--poudre:#F2E1DB;--blush:#EBD3CB;--rose:#7E2638;--rose-fonce:#5E1A29;--or:#D9A79A;--ligne:#EBD8D1;--noir:#000;
+--b-fond:#FCF6F3;--b-encre:#2A171C;--b-doux:#7C6066;--b-ligne:#EBD8D1;--b-accent:#5E1A29;--b-sombre:#7E2638;--b-sur-sombre:#fff;
+--b-titre:Italiana,Georgia,serif;--b-texte:Manrope,Arial,sans-serif;--b-photo:#F2E1DB;--b-ratio:3/4;
+--b-pre:#7E2638;--b-sur-pre:#fff;--b-dispo:#fff;--b-sur-dispo:#2A171C;--b-prix:#7E2638;--b-bord-btn:#7E2638;
+--b-bande-fond:#000;--b-bande-encre:#D9A79A;--b-bande-accent:#B5465C;--b-wa:#1fa855;--b-champ:#fff;--b-encart:#F2E1DB;
+--b-barre-fond:rgba(252,246,243,.96);--b-barre-encre:#2A171C;--b-barre-fond-plein:#fff
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{margin:0;background:var(--ivoire);color:var(--encre);font-family:Manrope,Arial,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button,input,select,textarea{font:inherit}
+h1,h2,h3{font-family:Italiana,Georgia,serif;font-weight:400}
+
+.annonce{background:var(--rose);color:#fff;text-align:center;font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;padding:10px 14px}
+.maisons{display:flex;justify-content:center;background:var(--noir);border-bottom:1px solid #1d1416}
+.maisons a{padding:12px 26px;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#8e7b78;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+.maisons a:hover{color:#fff}
+.maisons a.actif{color:#f3e4df;border-bottom-color:var(--or)}
+
+.nav{position:sticky;top:0;z-index:40;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:88px;padding:0 4%;background:var(--noir);color:#f3e4df;border-bottom:1px solid #1d1416}
+.nav-liens{display:flex;gap:30px;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+.nav-liens a:hover{color:var(--or)}
+.logo{display:block}
+.logo img{height:84px;width:auto}
+.nav-droite{justify-self:end;display:flex;align-items:center;gap:22px}
+.btn-nav{display:flex;align-items:center;gap:9px;background:none;border:0;padding:8px 0;color:inherit;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;cursor:pointer}
+.btn-nav:hover{color:var(--or)}
+.btn-nav .b-compteur{display:inline-grid;place-items:center;min-width:21px;height:21px;padding:0 5px;border-radius:11px;background:var(--rose);color:#fff;font-size:10px;letter-spacing:0}
+
+.hero{position:relative;display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:40px;padding:70px 6% 80px;overflow:hidden;background:radial-gradient(circle at 85% 20%,#efd2cb 0,transparent 42%),radial-gradient(circle at 10% 90%,#f6e4de 0,transparent 45%),linear-gradient(180deg,#fcf6f3,#f7ebe6)}
+.surtitre{font-size:10px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--rose)}
+.hero h1{font-size:clamp(60px,6.4vw,112px);line-height:.95;letter-spacing:-.035em;margin:22px 0 22px;color:var(--encre)}
+.hero h1 em{color:var(--rose);font-style:italic}
+.hero p{max-width:440px;margin:0;color:var(--doux);font-size:15px;line-height:1.8}
+.hero-infos{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 0;padding:0;list-style:none}
+.hero-infos li{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--ligne);border-radius:40px;color:var(--encre);font-size:12px;font-weight:600;padding:9px 15px;box-shadow:0 4px 14px rgba(126,38,56,.08)}
+.hero-infos li:before{content:'';width:7px;height:7px;border-radius:50%;background:var(--rose)}
+.hero-boutons{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:14px;padding:18px 28px;background:var(--rose);color:#fff;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--rose);transition:transform .25s,background .25s,box-shadow .25s;box-shadow:0 10px 26px rgba(126,38,56,.28)}
+.cta:hover{background:var(--rose-fonce);border-color:var(--rose-fonce);transform:translateY(-2px)}
+.cta.contour{background:transparent;color:var(--encre);border-color:var(--encre);box-shadow:none}
+.cta.contour:hover{background:var(--encre);color:#fff}
+.cta.blanc{background:#fff;color:var(--rose);border-color:#fff;box-shadow:0 10px 26px rgba(0,0,0,.12)}
+.cta.blanc:hover{background:#fff6f2}
+.hero-visuel{position:relative;height:min(640px,72svh);min-height:460px}
+.arche{position:absolute;overflow:hidden;border-radius:999px 999px 0 0;background:var(--blush);box-shadow:0 30px 60px rgba(120,60,60,.15)}
+.arche img{width:100%;height:100%;object-fit:cover}
+.arche.grande{right:8%;top:0;bottom:0;width:62%;border:8px solid #fff}
+.arche.petite{left:0;bottom:8%;width:34%;height:52%;border:6px solid #fff}
+.arche.grande img{object-position:50% 35%}
+.arche.petite img{object-position:50% 30%}
+.hero-carte{position:absolute;right:0;top:12%;background:#fff;padding:16px 18px;max-width:210px;box-shadow:0 16px 40px rgba(120,60,60,.14)}
+.hero-carte b{display:block;font-family:Italiana,Georgia,serif;font-weight:400;font-size:24px;line-height:1.1;color:var(--rose-fonce);margin-bottom:6px}
+.hero-carte span{font-size:12px;line-height:1.5;color:var(--doux)}
+.etoile{position:absolute;color:var(--or);font-size:22px}
+.etoile.e1{left:30%;top:6%}.etoile.e2{right:2%;bottom:12%;font-size:16px}
+
+.section{max-width:1440px;margin:auto;padding:100px 5%}
+.entete{max-width:820px;margin-bottom:34px}
+.titre{font-size:clamp(48px,5.4vw,84px);line-height:.98;letter-spacing:-.03em;margin:14px 0 16px;color:var(--encre)}
+.titre em{color:var(--rose)}
+.sous{font-size:15px;line-height:1.8;color:var(--doux);max-width:580px;margin:0}
+.sous b{color:var(--encre);font-weight:700}
+.filtres{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 40px}
+.filtre{border:1px solid var(--ligne);background:#fff;border-radius:40px;padding:11px 20px;color:var(--encre);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:.2s}
+.filtre:hover{border-color:var(--rose);color:var(--rose)}
+.filtre.actif{background:var(--rose);border-color:var(--rose);color:#fff}
+.mention{text-align:center;margin:44px 0 0;font-size:12px;color:var(--doux)}
+.carte{background:#fff;padding:10px 10px 16px;box-shadow:0 8px 30px rgba(120,60,60,.06);transition:box-shadow .3s,transform .3s}
+.carte:hover{box-shadow:0 18px 44px rgba(120,60,60,.13);transform:translateY(-3px)}
+.carte-info{padding:16px 6px 0}
+.carte-ajout{background:var(--rose);color:#fff;border-color:var(--rose);font-weight:700}
+.carte-ajout:hover{background:var(--rose-fonce);border-color:var(--rose-fonce)}
+.b-statut,.carte-badge{border-radius:30px;font-weight:700}
+
+.etapes-zone{background:var(--poudre)}
+.etapes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.etape{background:#fff;padding:34px 30px;box-shadow:0 8px 30px rgba(120,60,60,.06)}
+.etape-num{display:grid;place-items:center;width:58px;height:58px;border-radius:50%;background:var(--blush);font-family:Italiana,Georgia,serif;font-size:26px;color:var(--rose-fonce)}
+.etape h3{font-size:30px;line-height:1.1;margin:20px 0 10px;color:var(--encre)}
+.etape p{font-size:14px;line-height:1.8;color:var(--doux);margin:0}
+
+.chapitre{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:6%;padding:100px 6%;background:#fff}
+.chapitre-photo{position:relative;height:560px}
+.chapitre-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;border-radius:0 0 999px 999px}
+.chapitre-texte>span{font-size:10px;font-weight:600;letter-spacing:.26em;color:var(--rose)}
+.chapitre-texte h2{font-size:clamp(46px,5vw,84px);line-height:1.02;letter-spacing:-.03em;margin:22px 0;color:var(--encre)}
+.chapitre-texte h2 i{color:var(--rose)}
+.chapitre-texte p{max-width:420px;color:var(--doux);line-height:1.8;font-size:15px;margin:0 0 30px}
+
+.contact{background:linear-gradient(135deg,#5E1A29,#8E3346);color:#fff;text-align:center;padding:100px 22px}
+.contact .surtitre{color:var(--or)}
+.contact h2{font-size:clamp(46px,5.4vw,84px);line-height:1;margin:16px auto;max-width:900px}
+.contact p{color:#fff2ee;font-size:15px;line-height:1.8;max-width:480px;margin:0 auto 30px}
+
+.pied{background:var(--noir);color:#f3e4df;padding:64px 6% 30px}
+.pied-grille{display:grid;grid-template-columns:2fr 1fr 1fr;gap:50px}
+.pied-logo{width:220px;max-width:100%}
+.pied p,.pied a{color:#b9a6a2;font-size:13px;line-height:2.1}
+.pied a:hover{color:var(--or)}
+.pied h4{font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;margin:0 0 10px}
+.pied-bas{border-top:1px solid #2b2022;margin-top:50px;padding-top:20px;font-size:11px;color:#8e7b78}
+
+@media(max-width:1000px){
+.etapes{grid-template-columns:1fr;gap:12px}
+.etape{display:grid;grid-template-columns:58px 1fr;column-gap:18px;padding:24px 20px}
+.etape-num{grid-row:span 2}
+.etape h3{margin:6px 0 6px;font-size:26px}
+}
+
+@media(max-width:850px){
+html{scroll-padding-top:80px}
+.nav{height:66px;padding:0 16px}
+.nav-liens a:not(:first-child){display:none}
+.logo img{height:60px}
+.nav-droite .lien-masque{display:none}
+.hero{grid-template-columns:1fr;gap:34px;padding:34px 20px 50px}
+.hero h1{font-size:clamp(50px,13.5vw,72px);margin:14px 0 16px}
+.hero p{font-size:15px}
+.hero-boutons{margin-top:24px}
+.hero-boutons .cta{flex:1 1 100%}
+.hero-visuel{height:440px;min-height:0}
+.arche.grande{right:4%;width:70%}
+.arche.petite{width:38%;height:46%;bottom:4%}
+.hero-carte{top:auto;bottom:-14px;right:0;max-width:180px;padding:12px 14px}
+.hero-carte b{font-size:20px}
+.etoile.e1{left:22%}
+.section{padding:64px 20px}
+.titre{font-size:clamp(44px,11.5vw,64px)}
+.sous{font-size:14px}
+.filtres{margin-bottom:26px}
+.carte{padding:6px 6px 12px}
+.carte-info{padding:12px 4px 0}
+.chapitre{grid-template-columns:1fr;padding:64px 20px;gap:34px}
+.chapitre-photo{height:400px}
+.chapitre-texte h2{font-size:clamp(42px,11vw,60px);margin:16px 0}
+.chapitre-texte .cta{display:flex}
+.contact{padding:72px 22px}
+.contact h2{font-size:clamp(42px,11vw,60px)}
+.contact .cta{display:flex}
+.pied{padding:48px 22px 24px}
+.pied-grille{grid-template-columns:1fr 1fr;gap:30px 20px}
+.pied-grille>div:first-child{grid-column:1/-1}
+.pied-logo{width:170px}
+}
+
+@media(max-width:520px){
+.annonce{font-size:9px;letter-spacing:.12em;padding:9px 10px}
+.maisons a{padding:11px 14px;font-size:9px;letter-spacing:.16em}
+.hero-infos li{font-size:11px;padding:8px 12px}
+.hero-visuel{height:400px}
+.etape h3{font-size:24px}
+}
+</style>
+</head>
+<body>
+<div class="annonce">Perruques en précommande · Paiement en deux fois</div>
+<nav class="maisons" aria-label="Nos maisons"><a href="index.html" class="actif" aria-current="page">Bellelux Hair</a><a href="bijoux.html">Bellelux Bijoux</a></nav>
+
+<header class="nav">
+  <nav class="nav-liens" aria-label="Menu"><a href="#catalogue">Collection</a><a href="#etapes">Comment ça marche</a><a href="#univers">Notre univers</a></nav>
+  <a class="logo" href="#" aria-label="Bellelux Hair, accueil"><img src="logo-bellelux.jpg" alt="Bellelux Hair"></a>
+  <div class="nav-droite">
+    <a class="btn-nav lien-masque" href="#" data-wa>WhatsApp</a>
+    <button class="btn-nav" type="button" data-ouvrir-panier>Panier <span class="b-compteur">0</span></button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-texte">
+      <div class="surtitre">Précommandes ouvertes</div>
+      <h1>La beauté<br><em>en signature.</em></h1>
+      <p>Des perruques pensées pour vous sublimer. Choisissez votre modèle, réservez en quelques secondes et recevez votre perruque chez vous.</p>
+      <ul class="hero-infos"><li>Précommande</li><li>Paiement en deux fois</li><li>Commande sur WhatsApp</li></ul>
+      <div class="hero-boutons">
+        <a class="cta" href="#catalogue">Voir les perruques <span aria-hidden="true">→</span></a>
+        <a class="cta contour" href="#" data-wa>Discuter sur WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-visuel" aria-hidden="true">
+      <div class="arche grande"><img src="photo1.jpg" alt="" fetchpriority="high"></div>
+      <div class="arche petite"><img src="photo4.jpg" alt=""></div>
+      <div class="hero-carte"><b>Paiement en deux fois</b><span>Un acompte à la commande, le solde à la livraison.</span></div>
+      <span class="etoile e1">✦</span><span class="etoile e2">✦</span>
+    </div>
+  </section>
+
+  <div class="bande" aria-label="Perruques en précommande, paiement en deux fois">
+    <div class="bande-piste" aria-hidden="true">
+      <div class="bande-groupe"><span>Perruques en précommande</span><i>✦</i><span>Paiement en deux fois</span><i>✦</i><span>Commande sur WhatsApp</span><i>✦</i><span>Perruques en précommande</span><i>✦</i><span>Paiement en deux fois</span><i>✦</i><span>Commande sur WhatsApp</span><i>✦</i></div>
+      <div class="bande-groupe"><span>Perruques en précommande</span><i>✦</i><span>Paiement en deux fois</span><i>✦</i><span>Commande sur WhatsApp</span><i>✦</i><span>Perruques en précommande</span><i>✦</i><span>Paiement en deux fois</span><i>✦</i><span>Commande sur WhatsApp</span><i>✦</i></div>
+    </div>
+  </div>
+
+  <section class="section" id="catalogue">
+    <div class="entete">
+      <div class="surtitre">La sélection Bellelux</div>
+      <h2 class="titre">Toutes nos perruques <em>en précommande.</em></h2>
+      <p class="sous">Touchez une perruque pour voir sa fiche complète. <b>Paiement en deux fois</b> : un acompte à la commande, le solde à la livraison.</p>
+    </div>
+    <div class="filtres filtres-defile" role="group" aria-label="Filtrer la collection">
+      <button class="filtre actif" type="button" data-filtre="Tout" aria-pressed="true">Tout voir</button>
+      <button class="filtre" type="button" data-filtre="Couleur" aria-pressed="false">Couleur</button>
+      <button class="filtre" type="button" data-filtre="Noir" aria-pressed="false">Noir</button>
+      <button class="filtre" type="button" data-filtre="Wavy" aria-pressed="false">Wavy layers</button>
+    </div>
+    <div class="grille" id="produits"></div>
+    <p class="mention">Prix en FCFA · Toutes les perruques sont en précommande · Paiement en deux fois</p>
+  </section>
+
+  <section class="etapes-zone" id="etapes">
+    <div class="section">
+      <div class="entete">
+        <div class="surtitre">Votre précommande en toute simplicité</div>
+        <h2 class="titre">Comment ça <em>marche ?</em></h2>
+      </div>
+      <div class="etapes">
+        <div class="etape"><div class="etape-num">1</div><h3>Choisissez</h3><p>Ajoutez une ou plusieurs perruques à votre panier depuis la collection.</p></div>
+        <div class="etape"><div class="etape-num">2</div><h3>Envoyez sur WhatsApp</h3><p>Votre commande part directement sur WhatsApp. Nous confirmons ensemble les détails et le délai, puis vous réglez l’acompte.</p></div>
+        <div class="etape"><div class="etape-num">3</div><h3>Recevez</h3><p>Votre perruque vous est livrée. Vous réglez le solde à la livraison.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapitre" id="univers">
+    <div class="chapitre-photo"><img src="photo6.jpg" alt="Perruques Bellelux Hair" loading="lazy"></div>
+    <div class="chapitre-texte">
+      <span>NOTRE UNIVERS</span>
+      <h2>Votre beauté n’a pas besoin de <i>permission.</i></h2>
+      <p>Une coupe, une texture, une nuance. Chez Bellelux Hair, chaque perruque est choisie pour révéler votre allure et vous donner confiance, du quotidien aux grands jours.</p>
+      <a href="#catalogue" class="cta">Je choisis ma perruque <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="surtitre">Bellelux Hair</div>
+    <h2>Une question avant de commander ?</h2>
+    <p>Notre équipe vous répond directement sur WhatsApp. Nous vous aidons à choisir votre modèle et nous confirmons votre précommande personnellement.</p>
+    <a href="#" class="cta blanc" data-wa>Nous écrire sur WhatsApp <span aria-hidden="true">→</span></a>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="pied-grille">
+    <div><img class="pied-logo" src="logo-bellelux.jpg" alt="Bellelux Hair" loading="lazy"><p>L’élégance se porte avec assurance.</p></div>
+    <div><h4>Explorer</h4><p><a href="#catalogue">La collection</a><br><a href="#etapes">Comment ça marche</a><br><a href="bijoux.html">Bellelux Bijoux</a></p></div>
+    <div><h4>Besoin d’aide ?</h4><p><a href="#" data-wa>Contact WhatsApp</a><br>Précommande<br>Paiement en deux fois</p></div>
+  </div>
+  <div class="pied-bas">© 2026 Bellelux Hair · Côte d’Ivoire · Toutes les perruques sont en précommande</div>
+</footer>
+
+<script src="produits-hair.js"></script>
+<script src="boutique.js"></script>
+</body>
+</html>
