@@ -1,11 +1,12 @@
 (() => {
   const C = window.BOUTIQUE;
   const taux = C.acompte ?? 0.3;
-  const pct = Math.round(taux * 100) + ' %';
+  const tauxDe = p => (C.seuilAcompte && p.prix >= C.seuilAcompte) ? (C.acompteHaut ?? 0.5) : taux;
+  const pctDe = p => Math.round(tauxDe(p) * 100) + ' %';
   const P = C.produits.map(p => ({ ...p, images: p.images && p.images.length ? p.images : [p.image], precommande: p.precommande ?? C.precommandeParDefaut ?? true }));
   const parId = Object.fromEntries(P.map(p => [p.id, p]));
   const fmt = n => new Intl.NumberFormat('fr-FR').format(n) + ' FCFA';
-  const acompteDe = p => p.precommande ? Math.ceil(p.prix * taux / 100) * 100 : 0;
+  const acompteDe = p => p.precommande ? Math.ceil(p.prix * tauxDe(p) / 100) * 100 : 0;
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const $ = s => document.querySelector(s);
 
@@ -111,7 +112,7 @@
     <p class="carte-resume">${esc(p.resume)}</p>
     <p class="carte-prix">${fmt(p.prix)}</p>
     ${p.precommande
-      ? `<p class="carte-paiement"><span>Acompte ${pct} <b>${fmt(a)}</b></span><span>Solde à la livraison <b>${fmt(p.prix - a)}</b></span></p>`
+      ? `<p class="carte-paiement"><span>Acompte ${pctDe(p)} <b>${fmt(a)}</b></span><span>Solde à la livraison <b>${fmt(p.prix - a)}</b></span></p>`
       : `<p class="carte-paiement"><span>Payé à la livraison</span></p>`}
     <button class="carte-ajout" type="button" data-ajout="${p.id}">${p.precommande ? 'Précommander' : 'Ajouter au panier'} <span aria-hidden="true">+</span></button>
   </div>
@@ -167,7 +168,7 @@
   </div>
 </div>`).join('');
     pied.innerHTML = `<dl class="recap">${recapHTML(t)}</dl>
-<p class="recap-note">${t.acompte ? `Précommande : paiement en deux fois. Acompte de ${pct} à la commande, solde à la livraison.` : 'Paiement à la livraison.'}</p>
+<p class="recap-note">${t.acompte ? `Précommande : paiement en deux fois. Acompte à la commande, solde à la livraison.` : 'Paiement à la livraison.'}</p>
 <button class="b-btn" type="button" data-commander>Valider ma commande <span aria-hidden="true">→</span></button>`;
   }
 
@@ -229,7 +230,7 @@
     $('#fiche-nom').textContent = p.nom;
     $('#fiche-resume').textContent = p.resume || '';
     $('#fiche-paiement').innerHTML = `<div class="fort"><dt>Prix</dt><dd>${fmt(p.prix)}</dd></div>` + (p.precommande
-      ? `<div><dt>Acompte à la commande (${pct})</dt><dd>${fmt(a)}</dd></div><div><dt>Solde à la livraison</dt><dd>${fmt(p.prix - a)}</dd></div>`
+      ? `<div><dt>Acompte à la commande (${pctDe(p)})</dt><dd>${fmt(a)}</dd></div><div><dt>Solde à la livraison</dt><dd>${fmt(p.prix - a)}</dd></div>`
       : `<div><dt>Paiement</dt><dd>À la livraison</dd></div>`);
     $('#fiche-note').textContent = p.precommande
       ? 'Pièce en précommande, paiement en deux fois. Le délai vous est communiqué lors de la confirmation sur WhatsApp.'
