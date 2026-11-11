@@ -14,6 +14,110 @@ window.BOUTIQUE = {
   messageContact: 'Bonjour Bellelux Hair, je souhaite avoir des renseignements sur vos perruques en précommande.',
   produits: [
     {
+      id: 'wavy-bouncy-caramel',
+      nom: 'Wavy Bouncy Caramel',
+      surtitre: 'Perruque wavy bouncy couleur',
+      categorie: 'Curly',
+      images: ['perruques/wavy-bouncy-caramel.jpg'],
+      cadrage: '50% 30%',
+      prix: 125000,
+      badge: '',
+      resume: 'Longueur 10 · Frange',
+      description: 'Boucles rebondies caramel avec frange. Une perruque wavy bouncy en longueur 10, avec frange.\n\nDes boucles pleines de volume et de mouvement, faciles à porter au quotidien.',
+      details: [['Type', 'Wavy bouncy'], ['Longueur', '10'], ['Finition', 'Frange'], ['Couleur', 'Caramel aux reflets dorés']]
+    },
+    {
+      id: 'straight-noir-40',
+      nom: 'Straight Noir 40',
+      surtitre: 'Raw hair Vietnamese · Perruque Straight noir',
+      categorie: 'Longue',
+      images: ['perruques/straight-noir-40.jpg'],
+      cadrage: '50% 30%',
+      prix: 490000,
+      badge: '',
+      resume: 'Longueur 40 · Closure 5x5',
+      description: 'Noir naturel, très long, lisse et soyeux. Une perruque Raw hair Vietnamese Straight en longueur 40, 300 grammes, avec closure 5x5.\n\nUne chevelure longue, lisse et généreuse, pour une allure élégante en toute occasion.',
+      details: [['Type', 'Raw hair Vietnamese'], ['Longueur', '40'], ['Poids', '300 grammes'], ['Finition', 'Closure 5x5'], ['Couleur', 'Noir naturel, très long, lisse et soyeux']]
+    },
+    {
+      id: 'straight-noir-26',
+      nom: 'Straight Noir 26',
+      surtitre: 'Raw hair Vietnamese · Perruque Straight noir',
+      categorie: 'Longue',
+      images: ['perruques/straight-noir-26.jpg'],
+      cadrage: '50% 30%',
+      prix: 330000,
+      badge: '',
+      resume: 'Longueur 26 · Closure 5x5',
+      description: 'Noir naturel, long, lisse et brillant. Une perruque Raw hair Vietnamese Straight en longueur 26, 300 grammes, avec closure 5x5.\n\nUne chevelure longue, lisse et généreuse, pour une allure élégante en toute occasion.',
+      details: [['Type', 'Raw hair Vietnamese'], ['Longueur', '26'], ['Poids', '300 grammes'], ['Finition', 'Closure 5x5'], ['Couleur', 'Noir naturel, long, lisse et brillant']]
+    },
+    {
+      id: 'bob-noir-12',
+      nom: 'Bob Noir 12',
+      surtitre: 'Perruque Raw hair Vietnamese noir',
+      categorie: 'Noir',
+      images: ['perruques/bob-noir-12.jpg'],
+      cadrage: '50% 30%',
+      prix: 125000,
+      badge: '',
+      resume: 'Longueur 12 · Closure 2x6',
+      description: 'Noir naturel, lisse et soyeux. Une perruque Raw hair Vietnamese en longueur 12, avec closure 2x6.\n\nUne coupe nette et élégante qui se porte du quotidien aux grandes occasions.',
+      details: [['Type', 'Raw hair Vietnamese'], ['Longueur', '12'], ['Finition', 'Closure 2x6'], ['Couleur', 'Noir naturel, lisse et soyeux']]
+    },
+    {
+      id: 'bob-noir-frontal',
+      nom: 'Bob Noir Lace',
+      surtitre: 'Perruque Raw hair Vietnamese noir',
+      categorie: 'Noir',
+      images: ['perruques/bob-noir-frontal.jpg'],
+      cadrage: '50% 30%',
+      prix: 135000,
+      badge: '',
+      resume: 'Longueur 10 · Closure 5x5',
+      description: 'Noir profond, raie naturelle. Une perruque Raw hair Vietnamese en longueur 10, avec closure 5x5.\n\nUne coupe nette et élégante qui se porte du quotidien aux grandes occasions.',
+      details: [['Type', 'Raw hair Vietnamese'], ['Longueur', '10'], ['Finition', 'Closure 5x5'], ['Couleur', 'Noir profond, raie naturelle']]
+    },
+    {
+      id: 'bob-noir-caramel',
+      nom: 'Bob Noir Caramel',
+      surtitre: 'Perruque Raw hair Vietnamese couleur',
+      categorie: 'Couleur',
+      images: ['perruques/bob-noir-caramel.jpg'],
+      cadrage: '50% 30%',
+      prix: 120000,
+      badge: '',
+      resume: 'Longueur 10 · Closure 5x5',
+      description: 'Racine noire fondue dans un caramel. Une perruque Raw hair Vietnamese en longueur 10, avec closure 5x5.\n\nUne coupe nette et élégante qui se porte du quotidien aux grandes occasions.',
+      details: [['Type', 'Raw hair Vietnamese'], ['Longueur', '10'], ['Finition', 'Closure 5x5'], ['Couleur', 'Racine noire fondue dans un caramel']]
+    },
+    {
+      id: 'bob-chatain-doux',
+      nom: 'Bob Châtain Doux',
+      surtitre: 'Perruque Raw hair Vietnamese couleur',
+      categorie: 'Couleur',
+      images: ['perruques/bob-chatain-doux.jpg'],
+      cadrage: '50% 30%',
+      prix: 130000,
+      badge: '',
+      resume: 'Longueur 10 · Closure 5x5',
+      description: 'Châtain doux et lumineux. Une perruque Raw hair Vietnamese en longueur 10, avec closure 5x5.\n\nUne coupe nette et élégante qui se porte du quotidien aux grandes occasions.',
+      details: [['Type', 'Raw hair Vietnamese'], ['Longueur', '10'], ['Finition', 'Closure 5x5'], ['Couleur', 'Châtain doux et lumineux']]
+    },
+    {
+      id: 'bob-brun-moka',
+      nom: 'Bob Brun Moka',
+      surtitre: 'Perruque Raw hair Vietnamese couleur',
+      categorie: 'Couleur',
+      images: ['perruques/bob-brun-moka.jpg'],
+      cadrage: '50% 30%',
+      prix: 110000,
+      badge: '',
+      resume: 'Longueur 10 · Closure 2x6',
+      description: 'Brun moka profond. Une perruque Raw hair Vietnamese en longueur 10, avec closure 2x6.\n\nUne coupe nette et élégante qui se porte du quotidien aux grandes occasions.',
+      details: [['Type', 'Raw hair Vietnamese'], ['Longueur', '10'], ['Finition', 'Closure 2x6'], ['Couleur', 'Brun moka profond']]
+    },
+    {
       id: 'burmese-curly-28',
       nom: 'Burmese Curly',
       surtitre: 'Raw hair 12A · Perruque Burmese curly',
@@ -568,9 +672,9 @@ window.BOUTIQUE = {
       cadrage: '50% 30%',
       prix: 120000,
       badge: '',
-      resume: 'Longueur 10 · Closure 2x6',
-      description: 'Noir naturel, lisse et soyeux. Une perruque Raw hair Vietnamese en longueur 10, avec closure 2x6.\n\nUne coupe nette et élégante qui se porte du quotidien aux grandes occasions.',
-      details: [['Type', 'Raw hair Vietnamese'], ['Longueur', '10'], ['Finition', 'Closure 2x6'], ['Couleur', 'Noir naturel, lisse et soyeux']]
+      resume: 'Longueur 16 · Closure 2x6',
+      description: 'Noir naturel, lisse et soyeux. Une perruque Raw hair Vietnamese en longueur 16, avec closure 2x6.\n\nUne coupe nette et élégante qui se porte du quotidien aux grandes occasions.',
+      details: [['Type', 'Raw hair Vietnamese'], ['Longueur', '16'], ['Finition', 'Closure 2x6'], ['Couleur', 'Noir naturel, lisse et soyeux']]
     },
     {
       id: 'brun-fonce',
@@ -672,9 +776,9 @@ window.BOUTIQUE = {
       cadrage: '50% 30%',
       prix: 120000,
       badge: '',
-      resume: 'Longueur 10 · Closure 2x6',
-      description: 'Noir naturel, lisse et brillant. Une perruque Raw hair Vietnamese en longueur 10, avec closure 2x6.\n\nUne coupe nette et élégante qui se porte du quotidien aux grandes occasions.',
-      details: [['Type', 'Raw hair Vietnamese'], ['Longueur', '10'], ['Finition', 'Closure 2x6'], ['Couleur', 'Noir naturel, lisse et brillant']]
+      resume: 'Longueur 10 · Closure 5x5',
+      description: 'Noir naturel, lisse et brillant. Une perruque Raw hair Vietnamese en longueur 10, avec closure 5x5.\n\nUne coupe nette et élégante qui se porte du quotidien aux grandes occasions.',
+      details: [['Type', 'Raw hair Vietnamese'], ['Longueur', '10'], ['Finition', 'Closure 5x5'], ['Couleur', 'Noir naturel, lisse et brillant']]
     },
     {
       id: 'ombre-miel',
@@ -748,11 +852,11 @@ window.BOUTIQUE = {
       categorie: 'Couleur',
       images: ['perruques/meches-caramel.jpg'],
       cadrage: '50% 35%',
-      prix: 120000,
+      prix: 135000,
       badge: '',
-      resume: 'Longueur 10 · Closure 2x6',
-      description: 'Brun chocolat aux mèches caramel. Une perruque Raw hair Vietnamese en longueur 10, avec closure 2x6.\n\nUne coupe nette et élégante qui se porte du quotidien aux grandes occasions.',
-      details: [['Type', 'Raw hair Vietnamese'], ['Longueur', '10'], ['Finition', 'Closure 2x6'], ['Couleur', 'Brun chocolat aux mèches caramel']]
+      resume: 'Longueur 10 · Closure 5x5',
+      description: 'Brun chocolat aux mèches caramel. Une perruque Raw hair Vietnamese en longueur 10, avec closure 5x5.\n\nUne coupe nette et élégante qui se porte du quotidien aux grandes occasions.',
+      details: [['Type', 'Raw hair Vietnamese'], ['Longueur', '10'], ['Finition', 'Closure 5x5'], ['Couleur', 'Brun chocolat aux mèches caramel']]
     },
     {
       id: 'acajou',
@@ -893,9 +997,9 @@ window.BOUTIQUE = {
       cadrage: '50% 32%',
       prix: 190000,
       badge: '',
-      resume: 'Longueur 10 · Lace frontal 13x4',
-      description: 'Noir naturel, coupe en couches ondulées. Une perruque Raw donor en longueur 10, avec lace frontal 13x4, au mouvement plein de volume.\n\nUne coupe en couches qui donne du relief et se coiffe facilement, du quotidien aux grandes occasions.',
-      details: [['Type', 'Raw donor'], ['Longueur', '10'], ['Finition', 'Lace frontal 13x4'], ['Couleur', 'Noir naturel, coupe en couches ondulées']]
+      resume: 'Longueur 10 · Closure 7x7',
+      description: 'Noir naturel, coupe en couches ondulées. Une perruque Raw donor en longueur 10, avec closure 7x7, au mouvement plein de volume.\n\nUne coupe en couches qui donne du relief et se coiffe facilement, du quotidien aux grandes occasions.',
+      details: [['Type', 'Raw donor'], ['Longueur', '10'], ['Finition', 'Closure 7x7'], ['Couleur', 'Noir naturel, coupe en couches ondulées']]
     },
     {
       id: 'ombre-cuivre-intense',
@@ -1010,9 +1114,9 @@ window.BOUTIQUE = {
       cadrage: '50% 30%',
       prix: 120000,
       badge: '',
-      resume: 'Longueur 10 · Closure 2x6',
-      description: 'Blond miel à la racine noire. Une perruque Raw hair Vietnamese en longueur 10, avec closure 2x6.\n\nUne coupe nette et élégante qui se porte du quotidien aux grandes occasions.',
-      details: [['Type', 'Raw hair Vietnamese'], ['Longueur', '10'], ['Finition', 'Closure 2x6'], ['Couleur', 'Blond miel à la racine noire']]
+      resume: 'Longueur 10 · Closure 5x5',
+      description: 'Blond miel à la racine noire. Une perruque Raw hair Vietnamese en longueur 10, avec closure 5x5.\n\nUne coupe nette et élégante qui se porte du quotidien aux grandes occasions.',
+      details: [['Type', 'Raw hair Vietnamese'], ['Longueur', '10'], ['Finition', 'Closure 5x5'], ['Couleur', 'Blond miel à la racine noire']]
     },
     {
       id: 'wavy-blonde-longue',
