@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="boutique.css?v=20261111g">
+<link rel="stylesheet" href="boutique.css?v=20261112f">
 <style>
 :root{
 --noir:#000;--encre:#2A1E16;--ivoire:#F8EFE4;--ivoire2:#F1E3D0;--or:#B8863B;--or-clair:#DDB66C;--or-fonce:#8C6226;--rouge:#9B1C22;--rouge-fonce:#7A1419;--gris:#7A6A5A;--ligne:#E6D3B8;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',Arial,sans-serif;
@@ -53,10 +53,10 @@ button{cursor:pointer}
 .hero p{max-width:460px;margin:0 auto;color:var(--gris);font-size:14px;line-height:1.9}
 .cta{display:inline-flex;align-items:center;gap:18px;margin-top:34px;padding:18px 34px;border:1px solid var(--rouge);color:#fff;font-size:10px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;background:var(--rouge);transition:background .3s,color .3s;box-shadow:0 10px 26px rgba(155,28,34,.25)}
 .cta:hover{background:var(--rouge-fonce);border-color:var(--rouge-fonce)}
-.hero-galerie{display:grid;grid-template-columns:1fr 1.35fr 1fr;gap:14px;margin-top:80px;align-items:end}
-.hero-galerie .ph{aspect-ratio:3/4}
-.hero-galerie .ph:nth-child(2){aspect-ratio:4/4.4}
-.hero-galerie .ph:nth-child(1),.hero-galerie .ph:nth-child(3){transform:translateY(-40px)}
+.hero-galerie{display:flex;justify-content:center;margin-top:60px}
+.hero-galerie .ph{width:min(460px,100%);aspect-ratio:4/5;border-radius:999px 999px 0 0}
+.hero-galerie .ph img{object-position:50% 30%}
+.histoire .ph img{object-position:50% 40%}
 .ph{position:relative;overflow:hidden;background:linear-gradient(145deg,#efe2cf,#e3cfb2)}
 .ph img{height:100%;object-fit:cover}
 .ph:has(.img-absente)::after,.carte-photo:has(.img-absente)::after{content:'◇';position:absolute;inset:0;display:grid;place-items:center;font-size:42px;color:var(--or)}
@@ -135,10 +135,8 @@ html{scroll-padding-top:76px}
 .carte-info{padding:12px 4px 0}
 .nav-droite .lien-masque{display:none}
 .hero{padding-top:60px}
-.hero-galerie{grid-template-columns:1fr 1fr;margin-top:50px;gap:10px}
-.hero-galerie .ph:nth-child(3){display:none}
-.hero-galerie .ph:nth-child(1){transform:none}
-.hero-galerie .ph:nth-child(2){aspect-ratio:3/4}
+.hero-galerie{margin-top:40px}
+.hero-galerie .ph{width:86%}
 .section{padding:76px 20px}
 .entete{margin-bottom:34px}
 .filtres{margin-bottom:34px}
@@ -175,7 +173,7 @@ html{scroll-padding-top:76px}
 </style>
 </head>
 <body>
-<div class="announce">Ensembles or plaqué · 13 000 FCFA</div>
+<div class="announce">Bijoux or plaqué et acier · Ne noircit pas</div>
 <nav class="maisons" aria-label="Nos maisons">
   <a href="index.html">Bellelux Hair</a>
   <a href="bijoux.html" class="actif" aria-current="page">Bellelux Bijoux</a>
@@ -199,9 +197,7 @@ html{scroll-padding-top:76px}
     <p>Des pièces fines pour accompagner chaque instant. Un détail précieux qui révèle votre allure.</p>
     <a class="cta" href="#catalogue">Voir la collection <span aria-hidden="true">→</span></a>
     <div class="hero-galerie">
-      <div class="ph"><img src="bijoux/afrique.jpg" alt="Boucles d’oreilles dorées"></div>
-      <div class="ph"><img src="bijoux/noeud-trinite.jpg" alt="Collier doré"></div>
-      <div class="ph"><img src="bijoux/cauri.jpg" alt="Bague en or"></div>
+      <div class="ph"><img src="bijoux/hero-portrait.jpg" alt="Bellelux Bijoux" fetchpriority="high"></div>
     </div>
   </section>
 
@@ -223,15 +219,23 @@ html{scroll-padding-top:76px}
     <div class="entete apparition">
       <div class="surtitre">La sélection</div>
       <h2 class="titre">Nos pièces <em>précieuses.</em></h2>
-      <p class="sous">Touchez un ensemble pour voir sa fiche. Chaque ensemble comprend les boucles d’oreilles et le collier en <b>or plaqué</b>, <b>13 000 FCFA</b>, payé à la livraison.</p>
+      <p class="sous">Touchez un bijou pour voir sa fiche. Ensembles, colliers, bracelets, boucles d’oreilles et montres. Tout se règle à la livraison.</p>
     </div>
     
+    <div class="filtres filtres-defile" role="group" aria-label="Filtrer la collection">
+      <button class="filtre actif" type="button" data-filtre="Tout" aria-pressed="true">Tout voir</button>
+      <button class="filtre" type="button" data-filtre="Ensemble" aria-pressed="false">Ensembles</button>
+      <button class="filtre" type="button" data-filtre="Collier" aria-pressed="false">Colliers</button>
+      <button class="filtre" type="button" data-filtre="Boucles" aria-pressed="false">Boucles d’oreilles</button>
+      <button class="filtre" type="button" data-filtre="Bracelet" aria-pressed="false">Bracelets</button>
+      <button class="filtre" type="button" data-filtre="Montre" aria-pressed="false">Montres</button>
+    </div>
     <div class="grille" id="produits"></div>
-    <p class="mention">Ensemble boucles d’oreilles et collier · 13 000 FCFA · Paiement à la livraison</p>
+    <p class="mention">Prix en FCFA · Paiement à la livraison · Commande sur WhatsApp</p>
   </section>
 
   <section class="histoire" id="histoire">
-    <div class="ph"><img src="bijoux/ovale-filigrane.jpg" alt="Bijoux Bellelux" loading="lazy"></div>
+    <div class="ph"><img src="bijoux/bagues-mains.jpg" alt="Bagues Bellelux Bijoux" loading="lazy"></div>
     <div class="histoire-texte apparition">
       <span class="surtitre">La maison</span>
       <h2>Un bijou,<br><em>une signature.</em></h2>
@@ -260,8 +264,8 @@ html{scroll-padding-top:76px}
   <div class="pied-bas"><span>© 2026 Bellelux Bijoux. Tous droits réservés.</span><span>Une maison Bellelux</span></div>
 </footer>
 
-<script src="produits-bijoux.js?v=20261111g"></script>
-<script src="boutique.js?v=20261111g"></script>
+<script src="produits-bijoux.js?v=20261112f"></script>
+<script src="boutique.js?v=20261112f"></script>
 <script>
 const obs = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('vu'); obs.unobserve(en.target); } }), { threshold: .15 }) : null;
 document.querySelectorAll('.apparition').forEach(el => obs ? obs.observe(el) : el.classList.add('vu'));
